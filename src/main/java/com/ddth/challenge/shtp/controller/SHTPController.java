@@ -1,25 +1,24 @@
-package com.ddth.hello.demo.controller;
+package com.ddth.challenge.shtp.controller;
 
-import com.ddth.hello.demo.model.HelloMessage;
-import org.hibernate.validator.constraints.pl.REGON;
+import com.ddth.challenge.shtp.model.ResponseMessage;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class HelloController {
+public class SHTPController {
 
 	public static String lastestMessage = "Hello World";
 
 	@GetMapping(value = "/hello")
-	public HelloMessage helloGet(){
-		HelloMessage hm = new HelloMessage();
+	public ResponseMessage helloGet(){
+		ResponseMessage hm = new ResponseMessage();
 		hm.setMessage(lastestMessage);
 		hm.setStatus("200");
 		return hm;
 	}
 
 	@PostMapping(value="/set-hello-message")
-	public HttpStatus setHelloMessage(@RequestParam(value="message") String message){
+	public HttpStatus setResponseMessage(@RequestParam(value="message") String message){
 		lastestMessage = message;
 		return HttpStatus.OK;
 	}

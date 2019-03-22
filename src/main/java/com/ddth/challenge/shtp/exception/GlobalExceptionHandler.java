@@ -1,4 +1,4 @@
-package com.ddth.hello.demo.exception;
+package com.ddth.challenge.shtp.exception;
 
 
 import org.springframework.web.bind.MissingServletRequestParameterException;

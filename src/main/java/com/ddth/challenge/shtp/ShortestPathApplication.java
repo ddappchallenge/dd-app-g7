@@ -1,13 +1,13 @@
-package com.ddth.hello.demo;
+package com.ddth.challenge.shtp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoHelloApplication {
+public class ShortestPathApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoHelloApplication.class, args);
+		SpringApplication.run(ShortestPathApplication.class, args);
 	}
 
 }

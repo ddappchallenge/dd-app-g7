@@ -1,9 +1,9 @@
-package com.ddth.hello.demo.model;
+package com.ddth.challenge.shtp.model;
 
 import lombok.Data;
 
 @Data
-public class HelloMessage {
+public class ResponseMessage {
 	private String message;
 	private String status;
 }
