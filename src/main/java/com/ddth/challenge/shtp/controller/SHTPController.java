@@ -1,5 +1,6 @@
 package com.ddth.challenge.shtp.controller;
 
+import com.ddth.challenge.shtp.algorithm.ShortestPath;
 import com.ddth.challenge.shtp.model.ResponseMessage;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -21,5 +22,11 @@ public class SHTPController {
 	public HttpStatus setResponseMessage(@RequestParam(value="message") String message){
 		lastestMessage = message;
 		return HttpStatus.OK;
+	}
+
+	@GetMapping(value = "short")
+	public String ShortestPath(){
+		ShortestPath a= new ShortestPath();
+		return "Just a sample";
 	}
 }
