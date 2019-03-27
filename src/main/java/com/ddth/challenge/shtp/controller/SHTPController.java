@@ -10,11 +10,12 @@ public class SHTPController {
 
 	public static String lastestMessage = "Hello World";
 
+	@ResponseStatus(HttpStatus.OK)
 	@GetMapping(value = "/hello")
 	public ResponseMessage helloGet(){
 		ResponseMessage hm = new ResponseMessage();
 		hm.setMessage(lastestMessage);
-		hm.setStatus("200");
+		hm.setStatus("OK");
 		return hm;
 	}
 

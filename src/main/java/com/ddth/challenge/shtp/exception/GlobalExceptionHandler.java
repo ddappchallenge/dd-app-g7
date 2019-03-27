@@ -1,10 +1,12 @@
 package com.ddth.challenge.shtp.exception;
 
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import javax.annotation.PostConstruct;
 
@@ -23,11 +25,11 @@ public class GlobalExceptionHandler {
 		return error.getMessage();
 	}
 
-	@ResponseBody
+	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
 	@ExceptionHandler(Exception.class)
 	public String handleAll(){
 		System.out.println("Exception Handler");
-		return "Exception Handler";
+		return "Error";
 	}
 
 }
