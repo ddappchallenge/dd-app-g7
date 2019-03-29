@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class SHTPController {
 
-	public static String lastestMessage = "Hello World";
+	private static String lastestMessage = "Hello World";
 
 	@ResponseStatus(HttpStatus.OK)
 	@GetMapping(value = "/hello")
