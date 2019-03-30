@@ -30,4 +30,10 @@ public class SHTPController {
 		ShortestPath a= new ShortestPath();
 		return "Just a sample";
 	}
+
+	// @PostMapping(value = "/graph")
+	// public HttpStatus grpah(@RequestBody ResponseMessage graph) {
+	// 	// graph(graph);
+	// }
+
 }

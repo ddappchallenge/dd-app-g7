@@ -6,7 +6,7 @@ plugins {
 
 sonarqube {
     properties {
-        property 'sonar.projectName', 'Digital Challenge - Team 01'
+        property 'sonar.projectName', 'Digital Challenge - Creative'
     }
 }
 
